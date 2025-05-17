@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.album-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: clamp(24px, 5vw, 42px);
+  margin-bottom: 1rem;
+  animation: fadeInDown 0.4s ease forwards;
+}
+
+.album-logo {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  margin: auto;
+  background-image: url('https://i.imgur.com/qGq9vhE.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #1DB954;
+  animation: spin 12s linear infinite;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.controls button {
+  flex: 1;
+  margin: 0 5px;
+  background: none;
+  border: 2px solid #1DB954;
+  color: #1DB954;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background: #1DB954;
+  color: black;
+}
+
+.spotify-button {
+  display: inline-block;
+  background-color: #1DB954;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.spotify-button:hover {
+  background-color: #1ed760;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutUp {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.3s forwards;
+}
+
+.fade-out-up {
+  animation: fadeOutUp 0.3s forwards;
+}
