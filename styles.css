@@ -1,4 +1,4 @@
-/* Reset básico y estilo general */
+/* Reset básico */
 body {
   margin: 0;
   padding: 0;
@@ -10,23 +10,26 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  height: 100dvh;
-  overflow: hidden;
+  flex-direction: column;
 }
 
+/* Contenedor principal del álbum */
 .album-container {
   width: 90%;
   max-width: 600px;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 1;
 }
 
+/* Título principal */
 h1 {
   font-size: clamp(24px, 5vw, 42px);
   margin-bottom: 1rem;
   animation: fadeInDown 0.4s ease forwards;
 }
 
+/* Imagen del álbum */
 .album-logo {
   width: 100%;
   max-width: 250px;
@@ -40,19 +43,20 @@ h1 {
   animation: spin 12s linear infinite;
 }
 
+/* Controles de canción */
 .controls {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   margin: 20px 0;
 }
 
 .controls button {
-  flex: 1;
-  margin: 0 5px;
   background: none;
   border: 2px solid #1DB954;
   color: #1DB954;
-  padding: 10px;
+  padding: 10px 16px;
   font-size: 1rem;
   border-radius: 10px;
   cursor: pointer;
@@ -64,6 +68,7 @@ h1 {
   color: black;
 }
 
+/* Botón Spotify */
 .spotify-button {
   display: inline-block;
   background-color: #1DB954;
@@ -78,6 +83,47 @@ h1 {
 .spotify-button:hover {
   background-color: #1ed760;
   transform: scale(1.05);
+}
+
+/* Footer */
+.footer-credit {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #888;
+  z-index: 1;
+}
+
+/* Popup Wanted */
+.wanted-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px #1DB954;
+  max-width: 90%;
+}
+
+.wanted-image {
+  background-image: url('https://i.imgur.com/XYGxZqY.png');
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin: 20px auto;
 }
 
 /* Animaciones */
@@ -102,86 +148,6 @@ h1 {
 
 .fade-out-up {
   animation: fadeOutUp 0.3s forwards;
-}
-
-.footer-credit {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.3);
-  font-style: italic;
-  pointer-events: none;
-  user-select: none;
-}
-
-/* Popup Wanted (centrado y encima) */
-.wanted-popup {
-  position: fixed;             /* fijo a pantalla */
-  top: 0;
-  left: 0;
-  width: 100vw;                /* todo el ancho */
-  height: 100vh;               /* todo el alto */
-  background: rgba(0, 0, 0, 0.8); /* fondo oscuro semi-transparente */
-  display: flex;               /* flexbox para centrar */
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;              /* encima de todo */
-}
-
-.popup-content {
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-  max-width: 90%;
-  width: 400px;
-  box-shadow: 0 0 20px #ff5252;
-  border: 3px dashed #ff5252;
-  color: white;
-}
-
-.popup-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #ff5252;
-}
-
-.popup-content img {
-  max-width: 200px;
-  width: 80%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 0 10px #fff;
-}
-
-.popup-content button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #1DB954;
-  color: white;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.popup-content button:hover {
-  background-color: #1ed760;
-  transform: scale(1.05);
-}
-
-.wanted-image {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 15px auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #fff;
-  background-image: url('https://i.ibb.co/d4tF5qyV/Whats-App-Image-2025-05-17-at-7-03-27-PM.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 
