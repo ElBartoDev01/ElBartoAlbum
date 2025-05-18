@@ -40,4 +40,10 @@ function previousSong() {
   updateSong();
 }
 
+function closeWanted() {
+  const overlay = document.getElementById("wanted-overlay");
+  overlay.style.display = "none";
+}
+
+
 updateSong();
