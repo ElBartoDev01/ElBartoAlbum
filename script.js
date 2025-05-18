@@ -69,6 +69,12 @@ function previousSong() {
 document.getElementById("next-btn").addEventListener("click", nextSong);
 document.getElementById("prev-btn").addEventListener("click", previousSong);
 
+function closeWanted() {
+  const overlay = document.getElementById("wanted-overlay");
+  overlay.style.display = "none";
+}
+
+
 window.onload = () => {
   updateSong();
   playClip();
