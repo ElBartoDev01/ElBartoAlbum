@@ -9,13 +9,14 @@
 </head>
 <body>
 
-  <div id="wanted-popup" class="wanted-popup">
-    <div class="popup-content">
-      <h2>🔍 SE BUSCA a Cuadrado Bit</h2>
-      <img src="https://i.imgur.com/LTbHftr.png" alt="Cuadrado Bit" />
-      <p>Última vez visto con el Compa Mario.</p>
-      <button onclick="closePopup()">Enterado. 🫡</button>
+  <div class="album-container">
+    <h1 id="title">Álbum Oficial - Bartzteca</h1>
+    <div class="album-logo"></div>
+    <div class="controls">
+      <button onclick="previousSong()">⏮ Anterior</button>
+      <button onclick="nextSong()">Siguiente ⏭</button>
     </div>
+    <a class="spotify-button" id="spotify-link" href="#" target="_blank">Escuchar en Spotify</a>
   </div>
   
   <div id="wanted-popup" class="wanted-popup">
