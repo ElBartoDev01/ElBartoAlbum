@@ -40,10 +40,11 @@ function previousSong() {
   updateSong();
 }
 
-function closeWanted() {
-  const overlay = document.getElementById("wanted-overlay");
-  overlay.style.display = "none";
+function closePopup() {
+  const popup = document.getElementById("wanted-popup");
+  popup.style.display = "none";
 }
+
 
 
 updateSong();
