@@ -122,12 +122,10 @@ h1 {
   width: 100%;
   height: 100dvh;
   background: rgba(0, 0, 0, 0.9);
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  flex-direction: column;
 }
 
 .wanted-box {
@@ -137,8 +135,8 @@ h1 {
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 0 20px #ff5252;
-  animation: fadeInDown 0.6s ease-out;
   max-width: 90%;
+  animation: fadeInDown 0.5s ease-out;
 }
 
 .wanted-box h2 {
@@ -170,4 +168,5 @@ h1 {
   background-color: #1ed760;
   transform: scale(1.05);
 }
+
 
