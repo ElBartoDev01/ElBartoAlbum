@@ -14,18 +14,18 @@ const songs = [
 ];
 
 const songs_mp3 = [
-  { name: "Barto Trap", mp3Url: "https://cdn.pixabay.com/download/audio/2022/03/20/audio_8c1c3df295.mp3?filename=funky-funk-6059.mp3" },
-  { name: "Kanye Mode", mp3Url: "https://cdn.pixabay.com/download/audio/2021/09/22/audio_254e37d03b.mp3?filename=hip-hop-loop-6361.mp3" },
-  { name: "Mi mente", mp3Url: "https://cdn.pixabay.com/download/audio/2023/03/02/audio_9a2494baf0.mp3?filename=relaxing-guitar-13102.mp3" },
-  { name: "Yo en su lugar", mp3Url: "https://cdn.pixabay.com/download/audio/2021/08/04/audio_6d5e9a06a3.mp3?filename=lofi-chill-5452.mp3" },
-  { name: "Misión en alturas del sur", mp3Url: "https://cdn.pixabay.com/download/audio/2022/02/15/audio_0936b81509.mp3?filename=chill-funk-5557.mp3" },
-  { name: "Misión Cumplida", mp3Url: "https://cdn.pixabay.com/download/audio/2022/03/01/audio_9f5ef2dcd1.mp3?filename=happy-funk-6106.mp3" },
-  { name: "Corrido del Fernando", mp3Url: "https://cdn.pixabay.com/download/audio/2021/08/25/audio_3e07e6a3f6.mp3?filename=latin-guitar-5611.mp3" },
-  { name: "Gracias Carnal", mp3Url: "https://cdn.pixabay.com/download/audio/2020/07/23/audio_c41d4ac0f8.mp3?filename=gracias-carnal-sample.mp3" },
-  { name: "Maria José", mp3Url: "https://cdn.pixabay.com/download/audio/2021/06/04/audio_019d8e5c32.mp3?filename=soft-jazz-5124.mp3" },
-  { name: "Corrido del Kikis", mp3Url: "https://cdn.pixabay.com/download/audio/2020/06/26/audio_0f7a434f9c.mp3?filename=corrido-kikis-sample.mp3" },
-  { name: "Regresa Cuadrada Bit", mp3Url: "https://cdn.pixabay.com/download/audio/2021/04/21/audio_4f86e439ae.mp3?filename=regresa-cuadrada-bit.mp3" },
-  { name: "La Cumperacha", mp3Url: "https://cdn.pixabay.com/download/audio/2020/10/10/audio_4b09efc3bb.mp3?filename=la-cumperacha-sample.mp3" }
+  { name: "Barto Trap", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Kanye Mode", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Mi mente", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Yo en su lugar", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Misión en alturas del sur", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Misión Cumplida", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Corrido del Fernando", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Gracias Carnal", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Maria José", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Corrido del Kikis", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "Regresa Cuadrada Bit", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
+  { name: "La Cumperacha", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" }
 ];
 
 let currentIndex = 0;
