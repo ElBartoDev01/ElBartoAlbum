@@ -2,37 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Álbum Oficial - Bartzteca</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="ElBartoLogo.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="album-container">
     <h1 id="title">Álbum Oficial - Bartzteca</h1>
-    <div class="album-logo"></div>
+    
+    <div class="album-logo" id="album-logo"></div>
+    
     <div class="controls">
-      <button id="prev-btn">⏮ Anterior</button>
-      <button id="next-btn">Siguiente ⏭</button>
-      <button id="play-btn">▶️ Reproducir canción</button>
+      <button id="prev-btn" aria-label="Anterior">⏮ Anterior</button>
+      <button id="play-btn" aria-label="Reproducir">▶️ Reproducir</button>
+      <button id="next-btn" aria-label="Siguiente">Siguiente ⏭</button>
     </div>
-    <a class="spotify-button" id="spotify-link" href="#" target="_blank">Escuchar en Spotify</a>
+    
+    <a class="spotify-button" id="spotify-link" href="#" target="_blank" rel="noopener noreferrer">
+      Escuchar en Spotify
+    </a>
   </div>
 
-  <!-- POPUP SE BUSCA -->
   <div id="wanted-popup" class="wanted-popup">
     <div class="popup-content">
       <h2>🔍 SE BUSCA a Cuadrado Bit</h2>
-      <div class="wanted-image"></div>
+      <img src="https://i.ibb.co/d4tF5qyV/Whats-App-Image-2025-05-17-at-7-03-27-PM.jpg" alt="Cuadrado Bit" />
       <p>Última vez visto con el Compa Mario.</p>
-      <button onclick="closePopup()">Enterado. 🫡</button>
+      <button id="close-popup-btn">Enterado. 🫡</button>
     </div>
   </div>
 
   <footer class="footer-credit">
     Zavala Records & Barto Develops
   </footer>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
