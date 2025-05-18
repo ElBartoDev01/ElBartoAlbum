@@ -14,18 +14,18 @@ const songs = [
 ];
 
 const songs_mp3 = [
-  { name: "Barto Trap", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Kanye Mode", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Mi mente", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Yo en su lugar", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Misión en alturas del sur", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Misión Cumplida", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Corrido del Fernando", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Gracias Carnal", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Maria José", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Corrido del Kikis", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "Regresa Cuadrada Bit", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" },
-  { name: "La Cumperacha", mp3Url: "https://github.com/ElBartoDev01/ElBartoMusic/raw/main/Prepucini%20Boingnini.mp3" }
+  { name: "Barto Trap", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Kanye Mode", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Mi mente", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Yo en su lugar", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Misión en alturas del sur", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Misión Cumplida", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Corrido del Fernando", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Gracias Carnal", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Maria José", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "Corrido del Kikis", mp3Url: "Audio/Prepucini Boingnini.mp33" },
+  { name: "Regresa Cuadrada Bit", mp3Url: "Audio/Prepucini Boingnini.mp3" },
+  { name: "La Cumperacha", mp3Url: "Audio/Prepucini Boingnini.mp3" }
 ];
 
 let currentIndex = 0;
