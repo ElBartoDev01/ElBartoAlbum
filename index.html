@@ -26,12 +26,12 @@
     body {
       background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
       color: #fff;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
       animation: fadeInBody 1s ease-in;
     }
 
@@ -41,9 +41,9 @@
     }
 
     .title {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 500;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
       text-align: center;
       animation: textGlow 2s ease-in-out infinite alternate, slideDown 0.8s ease-out;
     }
@@ -80,11 +80,11 @@
     }
 
     #logo {
-      width: 160px;
-      height: 160px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       animation: spin 10s linear infinite, popIn 1.2s ease;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     @keyframes spin {
@@ -103,6 +103,7 @@
       align-items: center;
       gap: 1rem;
       animation: fadeInControls 1s ease-in;
+      width: 100%;
     }
 
     @keyframes fadeInControls {
@@ -112,17 +113,18 @@
 
     .controls {
       display: flex;
-      gap: 1.5rem;
+      justify-content: center;
+      gap: 2rem;
     }
 
     button {
       background-color: #1db954;
       border: none;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 65px;
+      height: 65px;
       color: #fff;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
       animation: buttonPulse 2s infinite ease-in-out;
@@ -146,10 +148,11 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: auto;
       font-size: 0.9rem;
       color: #b3b3b3;
+      text-align: center;
+      padding-bottom: 10px;
       animation: fadeInFooter 1.2s ease-in;
     }
 
@@ -234,5 +237,6 @@
   </script>
 </body>
 </html>
+
 
 
