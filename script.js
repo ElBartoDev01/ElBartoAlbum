@@ -1,19 +1,20 @@
 const title = document.getElementById("title");
 const spotifyLink = document.getElementById("spotify-link");
+const wantedPopup = document.getElementById("wanted-popup");
 
 const songs = [
-      { name: "Barto Trap", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Kanye Mode", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Mi mente", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Yo en su lugar", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Misión en alturas del sur", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Misión Cumplida", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Corrido del Fernando", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Gracias Carnal", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Maria José", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Corrido del Kikis", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "Regresa Cuadrada Bit", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-      { name: "La Cumperacha", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" }
+  { name: "Barto Trap", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Kanye Mode", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Mi mente", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Yo en su lugar", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Misión en alturas del sur", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Misión Cumplida", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Corrido del Fernando", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Gracias Carnal", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Maria José", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Corrido del Kikis", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "Regresa Cuadrada Bit", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+  { name: "La Cumperacha", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" }
 ];
 
 let currentIndex = 0;
@@ -40,11 +41,19 @@ function previousSong() {
   updateSong();
 }
 
+// Función para cerrar popup
 function closePopup() {
-  const popup = document.getElementById("wanted-popup");
-  popup.style.display = "none";
+  wantedPopup.style.display = "none";
 }
 
+// Función para abrir popup (puedes llamarla si quieres mostrar el popup en algún momento)
+function showPopup() {
+  wantedPopup.style.display = "flex";
+}
 
+// Mostrar popup al cargar la página (opcional)
+window.onload = () => {
+  showPopup();
+}
 
 updateSong();
