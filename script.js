@@ -68,8 +68,10 @@ function previousSong() {
 
 document.getElementById("next-btn").addEventListener("click", nextSong);
 document.getElementById("prev-btn").addEventListener("click", previousSong);
+document.getElementById("play-btn").addEventListener("click", playClip);
 
-function closeWanted() {
+
+function closePopup() {
   const overlay = document.getElementById("wanted-overlay");
   overlay.style.display = "none";
 }
