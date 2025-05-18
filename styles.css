@@ -9,6 +9,8 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 .album-container {
