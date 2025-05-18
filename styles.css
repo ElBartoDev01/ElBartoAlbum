@@ -172,4 +172,16 @@ h1 {
   transform: scale(1.05);
 }
 
+.wanted-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #fff;
+  background-image: url('https://i.imgur.com/LTbHftr.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
