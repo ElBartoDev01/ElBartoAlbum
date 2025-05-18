@@ -2,18 +2,18 @@ const title = document.getElementById("title");
 const spotifyLink = document.getElementById("spotify-link");
 
 const songs = [
-      { name: "Barto Trap", url: "https://open.spotify.com/track/1Ejmpl01" },
-      { name: "Kanye Mode", url: "https://open.spotify.com/track/2Ejmpl02" },
-      { name: "Mi mente", url: "https://open.spotify.com/track/3Ejmpl03" },
-      { name: "Yo en su lugar", url: "https://open.spotify.com/track/4Ejmpl04" },
-      { name: "Misión en alturas del sur", url: "https://open.spotify.com/track/5Ejmpl05" },
-      { name: "Misión Cumplida", url: "https://open.spotify.com/track/6Ejmpl06" },
-      { name: "Corrido del Fernando", url: "https://open.spotify.com/track/7Ejmpl07" },
-      { name: "Gracias Carnal", url: "https://open.spotify.com/track/8Ejmpl08" },
-      { name: "Maria José", url: "https://open.spotify.com/track/9Ejmpl09" },
-      { name: "Corrido del Kikis", url: "https://open.spotify.com/track/10Ejmpl10" },
-      { name: "Regresa Cuadrada Bit", url: "https://open.spotify.com/track/11Ejmpl11" },
-      { name: "La Cumperacha", url: "https://open.spotify.com/track/12Ejmpl12" }
+      { name: "Barto Trap", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Kanye Mode", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Mi mente", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Yo en su lugar", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Misión en alturas del sur", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Misión Cumplida", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Corrido del Fernando", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Gracias Carnal", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Maria José", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Corrido del Kikis", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "Regresa Cuadrada Bit", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
+      { name: "La Cumperacha", url: "https://open.spotify.com/intl-es/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" }
 ];
 
 let currentIndex = 0;
