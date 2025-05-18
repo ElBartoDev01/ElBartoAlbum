@@ -100,3 +100,15 @@ h1 {
 .fade-out-up {
   animation: fadeOutUp 0.3s forwards;
 }
+
+.footer-credit {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3); 
+  font-style: italic;
+  pointer-events: none; 
+  user-select: none;
+}
