@@ -1,16 +1,16 @@
 const songs = [
-  { name: "Barto Trap", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Kanye Mode", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Mi mente", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Yo en su lugar", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Misión en alturas del sur", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Misión Cumplida", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Corrido del Fernando", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Gracias Carnal", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Maria José", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Corrido del Kikis", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "Regresa Cuadrada Bit", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" },
-  { name: "La Cumperacha", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4?si=4acd3d3482a54a99" }
+  { name: "Barto Trap", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Kanye Mode", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Mi mente", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Yo en su lugar", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Misión en alturas del sur", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Misión Cumplida", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Corrido del Fernando", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Gracias Carnal", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Maria José", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Corrido del Kikis", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "Regresa Cuadrada Bit", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
+  { name: "La Cumperacha", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" }
 ];
 
 const songs_mp3 = [
@@ -31,6 +31,11 @@ const songs_mp3 = [
 let currentIndex = 0;
 const audio = new Audio();
 
+function updateSong() {
+  document.getElementById("title").textContent = songs[currentIndex].name;
+  document.getElementById("spotify-link").href = songs[currentIndex].spotifyUrl;
+}
+
 function playClip() {
   audio.pause();
   audio.src = songs_mp3[currentIndex].mp3Url;
@@ -39,19 +44,10 @@ function playClip() {
 
   setTimeout(() => {
     if (!audio.paused) {
+      audio.pause();
       audio.currentTime = 0;
-      audio.play();
     }
-  }, 10000);
-}
-
-function updateSong() {
-  const title = document.getElementById("title");
-  const spotifyLink = document.getElementById("spotify-link");
-  
-  title.textContent = songs[currentIndex].name;
-  spotifyLink.href = songs[currentIndex].spotifyUrl;
-  spotifyLink.textContent = "Escuchar en Spotify";
+  }, 10000); // solo 10 segundos
 }
 
 function nextSong() {
@@ -66,19 +62,20 @@ function previousSong() {
   playClip();
 }
 
-document.getElementById("next-btn").addEventListener("click", nextSong);
-document.getElementById("prev-btn").addEventListener("click", previousSong);
-document.getElementById("play-btn").addEventListener("click", playClip);
-
-
 function closePopup() {
-  const overlay = document.getElementById("wanted-overlay");
-  overlay.style.display = "none";
+  const popup = document.getElementById("wanted-popup");
+  popup.classList.add("fade-out-up");
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 300); // espera animación
 }
-
 
 window.onload = () => {
   updateSong();
-  playClip();
+
+  const popup = document.getElementById("wanted-popup");
+  popup.classList.add("fade-in-down");
+
+  document.getElementById("play-btn").addEventListener("click", playClip);
 };
 
