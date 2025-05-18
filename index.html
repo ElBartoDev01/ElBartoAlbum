@@ -3,40 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Álbum Oficial - Bartzteca</title>
-  <link rel="icon" href="ElBartoLogo.png" type="image/png" />
+  <title>Prueba de Canciones - Zavala Records</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="album-container">
-    <h1 id="title">Álbum Oficial - Bartzteca</h1>
-    
-    <div class="album-logo" id="album-logo"></div>
-    
+  <div class="container">
+    <div class="logo-container">
+      <div class="disc"></div>
+    </div>
+
     <div class="controls">
-      <button id="prev-btn" aria-label="Anterior">⏮ Anterior</button>
-      <button id="play-btn" aria-label="Reproducir">▶️ Reproducir</button>
-      <button id="next-btn" aria-label="Siguiente">Siguiente ⏭</button>
+      <button id="prev" aria-label="Anterior canción">⏮️</button>
+      <button id="play-pause" aria-label="Reproducir/Pausar">▶️</button>
+      <button id="next" aria-label="Siguiente canción">⏭️</button>
+      <a
+        id="spotify-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escuchar en Spotify"
+      >🎵 Escuchar en Spotify</a>
     </div>
-    
-    <a class="spotify-button" id="spotify-link" href="#" target="_blank" rel="noopener noreferrer">
-      Escuchar en Spotify
-    </a>
+
+    <div class="footer-text">Zavala Records &amp; El Barto Develops</div>
   </div>
 
-  <div id="wanted-popup" class="wanted-popup">
-    <div class="popup-content">
-      <h2>🔍 SE BUSCA a Cuadrado Bit</h2>
-      <img src="https://i.ibb.co/d4tF5qyV/Whats-App-Image-2025-05-17-at-7-03-27-PM.jpg" alt="Cuadrado Bit" />
-      <p>Última vez visto con el Compa Mario.</p>
-      <button id="close-popup-btn">Enterado. 🫡</button>
-    </div>
-  </div>
-
-  <footer class="footer-credit">
-    Zavala Records & Barto Develops
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+
