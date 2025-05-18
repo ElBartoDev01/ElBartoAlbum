@@ -41,13 +41,6 @@ function playClip() {
   audio.src = songs_mp3[currentIndex].mp3Url;
   audio.currentTime = 0;
   audio.play();
-
-  setTimeout(() => {
-    if (!audio.paused) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
-  }, 10000); // solo 10 segundos
 }
 
 function nextSong() {
@@ -63,19 +56,13 @@ function previousSong() {
 }
 
 function closePopup() {
-  const popup = document.getElementById("wanted-popup");
-  popup.classList.add("fade-out-up");
-  setTimeout(() => {
-    popup.style.display = "none";
-  }, 300); // espera animación
+  document.getElementById("wanted-popup").style.display = "none";
 }
 
 window.onload = () => {
   updateSong();
 
-  const popup = document.getElementById("wanted-popup");
-  popup.classList.add("fade-in-down");
-
+  document.getElementById("next-btn").addEventListener("click", nextSong);
+  document.getElementById("prev-btn").addEventListener("click", previousSong);
   document.getElementById("play-btn").addEventListener("click", playClip);
 };
-
