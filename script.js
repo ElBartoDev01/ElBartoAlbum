@@ -1,68 +1,68 @@
+const playPauseBtn = document.getElementById('play-pause');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const spotifyLink = document.getElementById('spotify-link');
+const disc = document.querySelector('.logo-container');
+
+let isPlaying = false;
+
 const songs = [
-  { name: "Barto Trap", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Kanye Mode", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Mi mente", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Yo en su lugar", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Misión en alturas del sur", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Misión Cumplida", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Corrido del Fernando", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Gracias Carnal", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Maria José", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Corrido del Kikis", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "Regresa Cuadrada Bit", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" },
-  { name: "La Cumperacha", spotifyUrl: "https://open.spotify.com/track/5GTBdEjZe7zEDp1N0eCZE4" }
+  {
+    title: 'Canción 1',
+    spotifyUrl: 'https://open.spotify.com/track/1', // Cambia con link real
+  },
+  {
+    title: 'Canción 2',
+    spotifyUrl: 'https://open.spotify.com/track/2',
+  },
+  {
+    title: 'Canción 3',
+    spotifyUrl: 'https://open.spotify.com/track/3',
+  },
 ];
 
-const songs_mp3 = [
-  { name: "Barto Trap", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Kanye Mode", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Mi mente", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Yo en su lugar", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Misión en alturas del sur", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Misión Cumplida", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Corrido del Fernando", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Gracias Carnal", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Maria José", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Corrido del Kikis", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Regresa Cuadrada Bit", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "La Cumperacha", mp3Url: "Audio/Prepucini Boingnini.mp3" }
-];
+let currentSongIndex = 0;
 
-let currentIndex = 0;
-const audio = new Audio();
-
-function updateSong() {
-  document.getElementById("title").textContent = songs[currentIndex].name;
-  document.getElementById("spotify-link").href = songs[currentIndex].spotifyUrl;
+function updateSpotifyLink() {
+  spotifyLink.href = songs[currentSongIndex].spotifyUrl;
 }
 
-function playClip() {
-  audio.pause();
-  audio.src = songs_mp3[currentIndex].mp3Url;
-  audio.currentTime = 0;
-  audio.play();
+function playSong() {
+  isPlaying = true;
+  playPauseBtn.textContent = '⏸️';
+  disc.style.animationPlayState = 'running';
+  // Aquí puedes agregar reproducción real si quieres
 }
 
-function nextSong() {
-  currentIndex = (currentIndex + 1) % songs.length;
-  updateSong();
-  playClip();
+function pauseSong() {
+  isPlaying = false;
+  playPauseBtn.textContent = '▶️';
+  disc.style.animationPlayState = 'paused';
+  // Aquí puedes pausar audio real
 }
 
-function previousSong() {
-  currentIndex = (currentIndex - 1 + songs.length) % songs.length;
-  updateSong();
-  playClip();
-}
+playPauseBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    pauseSong();
+  } else {
+    playSong();
+  }
+});
 
-function closePopup() {
-  document.getElementById("wanted-popup").style.display = "none";
-}
+prevBtn.addEventListener('click', () => {
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+  updateSpotifyLink();
+  if (isPlaying) playSong();
+});
 
-window.onload = () => {
-  updateSong();
+nextBtn.addEventListener('click', () => {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  updateSpotifyLink();
+  if (isPlaying) playSong();
+});
 
-  document.getElementById("next-btn").addEventListener("click", nextSong);
-  document.getElementById("prev-btn").addEventListener("click", previousSong);
-  document.getElementById("play-btn").addEventListener("click", playClip);
-};
+// Inicializar link
+updateSpotifyLink();
+// Pausar disco al inicio
+disc.style.animationPlayState = 'paused';
+
