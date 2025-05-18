@@ -23,7 +23,7 @@ const songs_mp3 = [
   { name: "Corrido del Fernando", mp3Url: "Audio/Prepucini Boingnini.mp3" },
   { name: "Gracias Carnal", mp3Url: "Audio/Prepucini Boingnini.mp3" },
   { name: "Maria José", mp3Url: "Audio/Prepucini Boingnini.mp3" },
-  { name: "Corrido del Kikis", mp3Url: "Audio/Prepucini Boingnini.mp33" },
+  { name: "Corrido del Kikis", mp3Url: "Audio/Prepucini Boingnini.mp3" },
   { name: "Regresa Cuadrada Bit", mp3Url: "Audio/Prepucini Boingnini.mp3" },
   { name: "La Cumperacha", mp3Url: "Audio/Prepucini Boingnini.mp3" }
 ];
