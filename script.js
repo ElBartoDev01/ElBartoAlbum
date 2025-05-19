@@ -110,5 +110,17 @@ volumeSlider.addEventListener("input", (e) => {
   audio.volume = e.target.value;
 });
 
+document.getElementById("popup-ok").addEventListener("click", () => {
+  const popup = document.getElementById("popup");
+  const overlay = document.getElementById("popup-overlay");
+
+  popup.classList.add("fade-out");
+
+  popup.addEventListener("animationend", () => {
+    overlay.style.display = "none";
+  }, { once: true });
+});
+
+
 // Carga inicial
 loadSong(currentSongIndex);
