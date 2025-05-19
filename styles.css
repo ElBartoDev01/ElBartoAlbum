@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #0d1117;
+  --card-color: #161b22;
+  --accent: #1db954;
+  --text-color: #ffffff;
+  --muted-text: #8b949e;
+  --border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+header {
+  font-family: 'BartztecaFont', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+}
+
+.player {
+  background: rgba(22, 27, 34, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+#cover {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 30px rgba(29, 185, 84, 0.5);
+  margin-bottom: 1rem;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#cover.spin {
+  animation: spin 8s linear infinite;
+}
+
+#cover.entering {
+  animation: enter 0.6s ease;
+}
+
+#song-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  animation: fadeText 0.6s ease;
+}
+
+.controls button {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.controls button:hover {
+  color: var(--accent);
+  transform: scale(1.2);
+}
+
+
+
+.progress-container {
+  background-color: #2a2f3a;
+  border-radius: 10px;
+  height: 8px;
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  background-color: var(--accent);
+  width: 0%;
+  transition: width 0.2s linear;
+}
+
+#volume {
+  width: 100%;
+  margin-bottom: 1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+#spotify-link {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  margin-top: 0.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#spotify-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(29, 185, 84, 1);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--muted-text);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  } 100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.controls button:active {
+  animation: buttonPress 0.3s ease forwards;
+}
+
+
+
+@font-face {
+  font-family: 'BartztecaFont';
+  src: url('font/Kamryn\ 3D\ Italic\ D.otf') format('truetype');
+}
